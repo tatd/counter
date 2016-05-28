@@ -8,7 +8,7 @@
    <script>
 	   
 onload = function(){
-	document.getElementById("result").innerHTML = localStorage.clickcount;
+	document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
 }
 
 function clickCounter() {
@@ -18,7 +18,7 @@ function clickCounter() {
         } else {
             localStorage.clickcount = 1;
         }
-        document.getElementById("result").innerHTML = localStorage.clickcount;
+        document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
     } else {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
@@ -41,11 +41,13 @@ function clickCounter() {
 		<div class="col-md-4">
          
         <div>
-        	<h1><div id="result"></div></h1>
+			<h1><b><div class="text-center" id="result"></b></div></h1>
         </div>    
 		<br>
-		<div>
-		<button type="button" class="btn btn-primary btn-lg" onclick="clickCounter()">Add drink</button>
+		<br>
+		<br>
+		<div class="text-center">
+		<button type="button" class="btn btn-danger btn-lg pagination-centered" onclick="clickCounter()">Add drink</button>
 		</div>
 		
 		<br>
