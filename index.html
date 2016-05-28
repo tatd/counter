@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-->
+<html lang="en">
+  <head>
+   <script>
+	   
+onload = function(){
+	document.getElementById("result").innerHTML = localStorage.clickcount;
+}
+
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = localStorage.clickcount;
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+<body>
+	<div class="container-fluid">
+   	<div class="jumbotron">
+   		<h2>Vicki's drank counter</h2>
+   	</div>
+    	<div class="row">
+        <div class="col-md-4"></div>
+		<div class="col-md-4">
+         
+        <div>
+        	<h1><div id="result"></div></h1>
+        </div>    
+		<br>
+		<div>
+		<button type="button" class="btn btn-primary btn-lg" onclick="clickCounter()">Add drink</button>
+		</div>
+		
+		<br>
+
+
+		</div>
+		<div class="col-md-4"></div>
+		
+		</div>
+	</div>
+<br>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>
