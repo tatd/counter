@@ -23,6 +23,13 @@ function clickCounter() {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
+
+function resetCounter(){
+	localStorage.clickcount = 0;
+	document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
+	
+}	   
+
 </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,8 +40,9 @@ function clickCounter() {
     <link href="css/style.css" rel="stylesheet">
 <body>
 	<div class="container-fluid">
+  	
    	<div class="jumbotron">
-   		<h2>Vicki's drank counter</h2>
+   		<h2>Drank counter</h2>
    	</div>
     	<div class="row">
         <div class="col-md-4"></div>
@@ -51,14 +59,25 @@ function clickCounter() {
 		</div>
 		
 		<br>
-
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="row force-to-bottom">
+		<button type="button" class="btn btn-secondar btn-xs pagination-centered" onclick="resetCounter()">Reset</button>
+		</div>
 
 		</div>
 		<div class="col-md-4"></div>
 		
 		</div>
 	</div>
-<br>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
