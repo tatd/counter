@@ -1,3 +1,10 @@
+
+<!--
+--Drink Counter by Dennis Tat
+--reference: http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_webstorage_local_clickcount
+-->
+
+
 <!DOCTYPE html>
 <!--
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -20,7 +27,7 @@ function clickCounter() {
         }
         document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
     } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        document.getElementById("result").innerHTML = "Your browser does not support web storage.";
     }
 }
 
