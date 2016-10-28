@@ -13,9 +13,14 @@
 <html lang="en">
   <head>
    <script>
-	   
+	   console.log(document.getElementById("result").innerHTML);
 onload = function(){
-	document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
+
+	console.log(document.getElementById("result").innerHTML);
+	if(localStorage === undefined)
+		document.getElementById("result").innerHTML = "<b>" + 0 + "</b>";
+
+	else document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
 }
 
 function clickCounter() {
@@ -56,7 +61,7 @@ function resetCounter(){
 		<div class="col-md-4">
          
         <div>
-			<h1><b><div class="text-center" id="result"></b></div></h1>
+			<h1><b><div class="text-center" id="result">0</b></div></h1>
         </div>    
 		<br>
 		<br>
