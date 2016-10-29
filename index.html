@@ -12,37 +12,7 @@
 -->
 <html lang="en">
   <head>
-   <script>
-	   console.log(document.getElementById("result").innerHTML);
-onload = function(){
 
-	console.log(document.getElementById("result").innerHTML);
-	if(localStorage === undefined)
-		document.getElementById("result").innerHTML = "<b>" + 0 + "</b>";
-
-	else document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
-}
-
-function clickCounter() {
-    if(typeof(Storage) !== "undefined") {
-        if (localStorage.clickcount) {
-            localStorage.clickcount = Number(localStorage.clickcount)+1;
-        } else {
-            localStorage.clickcount = 1;
-        }
-        document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
-    } else {
-        document.getElementById("result").innerHTML = "Your browser does not support web storage.";
-    }
-}
-
-function resetCounter(){
-	localStorage.clickcount = 0;
-	document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
-	
-}	   
-
-</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,7 +31,7 @@ function resetCounter(){
 		<div class="col-md-4">
          
         <div>
-			<h1><b><div class="text-center" id="result">0</b></div></h1>
+			<h1><b><div class="text-center" id="result"></b></div></h1>
         </div>    
 		<br>
 		<br>
@@ -90,6 +60,39 @@ function resetCounter(){
 		
 		</div>
 	</div>
+
+<script>
+	   //console.log(document.getElementById("result").innerHTML);
+onload = function(){
+	//console.log(localStorage.clickcount);
+	//console.log(document.getElementById("result").innerHTML);
+	if(localStorage.clickcount === undefined)
+		document.getElementById("result").innerHTML = "<b>" + 0 + "</b>";
+	else 
+		document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
+}
+
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
+    } else {
+        document.getElementById("result").innerHTML = "Your browser does not support web storage.";
+    }
+}
+
+function resetCounter(){
+	localStorage.clickcount = 0;
+	document.getElementById("result").innerHTML = "<b>" + localStorage.clickcount + "</b>";
+	
+}	   
+
+</script>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
